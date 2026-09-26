@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dhinesh Raji — Java Developer</title>
+  <meta name="description" content="Portfolio of Dhinesh Raji, a Java Developer focused on backend development — upskilling, building, and eager to contribute to innovative solutions.">
+  <meta name="author" content="Dhinesh Raji">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2064%2064'%3E%3Crect%20width='64'%20height='64'%20rx='16'%20fill='%2317151B'/%3E%3Ccircle%20cx='32'%20cy='32'%20r='17'%20fill='none'%20stroke='%23C2185B'%20stroke-width='5'/%3E%3Ccircle%20cx='32'%20cy='32'%20r='6'%20fill='%23C2185B'/%3E%3C/svg%3E">
+
+  <!-- Fonts: Inter (UI) + JetBrains Mono (developer text) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Icons: Devicon (tech logos) + Font Awesome (UI icons) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/devicon@2.15.1/devicon.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ============================================================
+       NAVIGATION — floating, glass-like beige
+  ============================================================ -->
+  <header class="nav" id="navbar">
+    <div class="nav-inner">
+      <a href="#home" class="brand mono" aria-label="Dhinesh Raji — back to top">dr<span class="brand-dot">.</span></a>
+
+      <button class="nav-toggle" id="nav-toggle" type="button"
+              aria-expanded="false" aria-controls="nav-menu" aria-label="Open navigation menu">
+        <span class="nav-toggle-box" aria-hidden="true">
+          <span class="nav-toggle-bar"></span>
+          <span class="nav-toggle-bar"></span>
+          <span class="nav-toggle-bar"></span>
+        </span>
+      </button>
+
+      <ul class="nav-menu" id="nav-menu">
+        <li><a class="nav-link is-active" href="#home" aria-current="true">Home</a></li>
+        <li><a class="nav-link" href="#about">About</a></li>
+        <li><a class="nav-link" href="#skills">Skills</a></li>
+        <li><a class="nav-link" href="#projects">Projects</a></li>
+        <li><a class="nav-link" href="#certificates">Certificates</a></li>
+        <li><a class="nav-link" href="#education">Education</a></li>
+        <li><a class="nav-link" href="#contact">Contact</a></li>
+      </ul>
+    </div>
+    <div class="nav-backdrop" id="nav-backdrop" aria-hidden="true"></div>
+  </header>
+
+  <main id="main">
+
+    <!-- ============================================================
+         HERO — text left · 3D avatar center · animated text right
+    ============================================================ -->
+    <section class="hero" id="home" aria-label="Introduction">
+      <div class="hero-particles" id="particles" aria-hidden="true"></div>
+      <div class="hero-dots" aria-hidden="true"></div>
+
+      <div class="container hero-grid">
+
+        <!-- LEFT: introduction -->
+        <div class="hero-left" data-stagger>
+          <p class="hero-greeting mono reveal"><span class="greeting-line" aria-hidden="true"></span>Hello, I'm</p>
+          <h1 class="hero-name reveal">Dhinesh Raji</h1>
+          <p class="hero-role reveal"><span class="role-line" aria-hidden="true"></span>Java Developer</p>
+          <p class="hero-tagline reveal">Eager to contribute to innovative solutions and grow as a Java Backend Developer.</p>
+          <p class="hero-status reveal"><span class="status-dot" aria-hidden="true"></span>Open to Work</p>
+          <div class="hero-cta reveal">
+            <a href="#projects" class="btn btn-primary">View My Work <i class="fa-solid fa-arrow-down" aria-hidden="true"></i></a>
+            <a href="#contact" class="btn btn-outline">Contact Me <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+            <!-- CUSTOMIZE: add assets/resume.pdf to automatically show this button (logic in script.js) -->
+            <a href="assets/resume.pdf" download class="btn btn-outline btn-resume" id="resume-btn" hidden>
+              <i class="fa-solid fa-download" aria-hidden="true"></i> Download Resume
+            </a>
+          </div>
+          <div class="hero-social reveal">
+            <!-- CUSTOMIZE: replace with real profile URLs -->
+            <a class="social-link" href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener" aria-label="Dhinesh Raji on LinkedIn">
+              <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
+            </a>
+            <a class="social-link" href="https://github.com/yourusername" target="_blank" rel="noopener" aria-label="Dhinesh Raji on GitHub">
+              <i class="fa-brands fa-github" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- CENTER: avatar with decorative elements -->
+        <div class="hero-visual reveal">
+          <div class="avatar-stage">
+            <div class="avatar-glow" aria-hidden="true"></div>
+            <div class="avatar-ring avatar-ring--soft" aria-hidden="true"></div>
+            <div class="avatar-ring avatar-ring--dash" aria-hidden="true"></div>
+            <!-- CUSTOMIZE: drop your 3D avatar render at assets/profile.png -->
+            <img class="avatar-img" id="profile-img" src="use.gif"
+                 alt="Professional 3D cartoon portrait of Dhinesh Raji" width="480" height="480">
+            <span class="float-chip mono chip-tl"><i class="fa-solid fa-server" aria-hidden="true"></i>Backend</span>
+            <span class="float-chip mono chip-br"><i class="fa-solid fa-lightbulb" aria-hidden="true"></i>Problem Solver</span>
+            <div class="code-card mono" aria-hidden="true">
+              <span class="code-dots"><span></span><span></span><span></span></span>
+              <pre><span class="c-kw">public</span> <span class="c-kw">class</span> <span class="c-cls">Dhinesh</span> {
+  <span class="c-kw">String</span> role = <span class="c-str">"Java Dev"</span>;
+}</pre>
+            </div>
+          </div>
+        </div>
+
+        <!-- RIGHT: animated developer text -->
+        <div class="hero-right">
+          <div class="java-dev" id="java-dev" aria-hidden="true">
+            <span class="jd-line jd-dark"><span class="jd-text">Java</span></span>
+            <span class="jd-line jd-pink"><span class="jd-text">Dev</span><span class="jd-cursor"></span></span>
+          </div>
+          <p class="hero-sub mono">backend&nbsp;·&nbsp;java&nbsp;·&nbsp;growth</p>
+        </div>
+      </div>
+
+      <a href="#about" class="hero-scroll mono" aria-label="Scroll to the About section">scroll<i class="fa-solid fa-arrow-down-long" aria-hidden="true"></i></a>
+    </section>
+
+    <!-- ============================================================
+         ABOUT
+    ============================================================ -->
+    <section class="section" id="about" aria-labelledby="about-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="kicker mono"><span class="kicker-num">01</span>About</p>
+          <h2 id="about-title" class="section-title">Backend-minded, always learning</h2>
+          <p class="section-sub">A short note on who I am and what I'm focused on right now.</p>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-text reveal">
+            <p>I am currently <em class="hl">upskilling in Java development</em> with a strong focus on
+              <em class="hl">backend technologies</em>. I enjoy learning how applications work behind the
+              scenes, solving programming problems, and building practical solutions.</p>
+            <p>I am eager to contribute to <em class="hl">innovative software solutions</em> while
+              continuously improving my technical skills — one problem, one commit, one feature at a time.</p>
+            <p class="about-note mono">&gt; focus → java backend · problem solving · continuous learning</p>
+          </div>
+
+          <div class="terminal reveal" aria-label="Stylized terminal introduction">
+            <div class="terminal-bar">
+              <span class="t-dot"></span><span class="t-dot"></span><span class="t-dot"></span>
+              <span class="terminal-title mono">dhinesh — zsh</span>
+            </div>
+            <div class="terminal-body mono">
+              <p><span class="t-prompt">$</span> whoami</p>
+              <p class="t-out">Dhinesh Raji</p>
+              <p><span class="t-prompt">$</span> cat focus.txt</p>
+              <p class="t-out">Java · Backend Development</p>
+              <p><span class="t-prompt">$</span> status --now</p>
+              <p class="t-out t-accent">Learning. Building. Growing.</p>
+              <p><span class="t-prompt">$</span> <span class="t-cursor" aria-hidden="true"></span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         SKILLS
+    ============================================================ -->
+    <section class="section section--tint" id="skills" aria-labelledby="skills-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="kicker mono"><span class="kicker-num">02</span>Skills</p>
+          <h2 id="skills-title" class="section-title">Tools I work with</h2>
+          <p class="section-sub">A focused stack I'm sharpening every day — real practice, no inflated percentages.</p>
+        </div>
+
+        <div class="skills-grid" data-stagger>
+          <div class="skill-card reveal">
+            <span class="skill-icon"><i class="devicon devicon-java-original" title="Java"></i></span>
+            <h3 class="skill-name">Java</h3>
+            <p class="skill-tag mono">core language</p>
+          </div>
+          <div class="skill-card reveal">
+            <span class="skill-icon"><i class="devicon devicon-git-original" title="Git"></i></span>
+            <h3 class="skill-name">Git</h3>
+            <p class="skill-tag mono">version control</p>
+          </div>
+          <div class="skill-card reveal">
+            <span class="skill-icon"><i class="fa-solid fa-pen-ruler" aria-hidden="true"></i></span>
+            <h3 class="skill-name">Designing</h3>
+            <p class="skill-tag mono">ui &amp; layouts</p>
+          </div>
+          <div class="skill-card reveal">
+            <span class="skill-icon"><i class="devicon devicon-html5-plain" title="HTML"></i></span>
+            <h3 class="skill-name">HTML</h3>
+            <p class="skill-tag mono">structure</p>
+          </div>
+          <div class="skill-card reveal">
+            <span class="skill-icon"><i class="devicon devicon-css3-plain" title="CSS"></i></span>
+            <h3 class="skill-name">CSS</h3>
+            <p class="skill-tag mono">styling</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         PROJECTS
+    ============================================================ -->
+    <section class="section" id="projects" aria-labelledby="projects-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="kicker mono"><span class="kicker-num">03</span>Projects</p>
+          <h2 id="projects-title" class="section-title">What I've been building</h2>
+          <p class="section-sub">Small, practical builds with a focus on clarity and usefulness.</p>
+        </div>
+
+        <div class="projects-grid">
+          <article class="project-card reveal">
+            <div class="project-media" aria-hidden="true">
+              <span class="project-watermark mono">{ };</span>
+              <span class="project-icon"><i class="fa-solid fa-clipboard-check"></i></span>
+              <span class="project-tag mono">web application</span>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">Exam Registration System</h3>
+              <p class="project-desc">A web application designed to simplify student exam registration and
+                management with a clear, user-friendly interface.</p>
+              <ul class="project-tech" aria-label="Technologies used">
+                <li class="tech-chip"><i class="devicon devicon-html5-plain" title="HTML" aria-hidden="true"></i>HTML</li>
+                <li class="tech-chip"><i class="devicon devicon-css3-plain" title="CSS" aria-hidden="true"></i>CSS</li>
+                <li class="tech-chip"><i class="devicon devicon-js-plain" title="JavaScript" aria-hidden="true"></i>JavaScript</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         CERTIFICATES
+    ============================================================ -->
+    <section class="section section--tint" id="certificates" aria-labelledby="certs-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="kicker mono"><span class="kicker-num">04</span>Certificates</p>
+          <h2 id="certs-title" class="section-title">Learning, certified</h2>
+          <p class="section-sub">Credentials from structured, in-depth learning programs.</p>
+        </div>
+
+        <div class="certs-grid">
+          <article class="cert-card reveal">
+            <i class="fa-solid fa-certificate cert-wm" aria-hidden="true"></i>
+            <span class="cert-badge"><i class="fa-solid fa-award" aria-hidden="true"></i></span>
+            <div class="cert-body">
+              <h3 class="cert-title">Cloud Computing</h3>
+              <p class="cert-org">NPTEL</p>
+            </div>
+            <span class="cert-type mono">certificate</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         EDUCATION — demo values, structured for easy replacement
+    ============================================================ -->
+    <section class="section" id="education" aria-labelledby="edu-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="kicker mono"><span class="kicker-num">05</span>Education</p>
+          <h2 id="edu-title" class="section-title">Where I've studied</h2>
+          <p class="section-sub">The foundation behind the curiosity.</p>
+        </div>
+
+        <div class="edu-list" data-stagger>
+          <!-- CUSTOMIZE: replace "Demo College Name" with the real college name -->
+          <article class="edu-item reveal">
+            <span class="edu-icon"><i class="fa-solid fa-graduation-cap" aria-hidden="true"></i></span>
+            <div class="edu-body">
+              <h3 class="edu-name">Demo College Name</h3>
+              <p class="edu-level mono">college</p>
+            </div>
+            <span class="edu-badge mono">demo — replace</span>
+          </article>
+
+          <!-- CUSTOMIZE: replace "Demo School Name" with the real school name -->
+          <article class="edu-item reveal">
+            <span class="edu-icon"><i class="fa-solid fa-school" aria-hidden="true"></i></span>
+            <div class="edu-body">
+              <h3 class="edu-name">Demo School Name</h3>
+              <p class="edu-level mono">school</p>
+            </div>
+            <span class="edu-badge mono">demo — replace</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         CONTACT — no form, just clean direct contact
+    ============================================================ -->
+    <section class="section section--dark" id="contact" aria-labelledby="contact-title">
+      <div class="container contact-wrap">
+        <div class="section-head section-head--center reveal">
+          <p class="kicker mono"><span class="kicker-num">06</span>Contact</p>
+          <h2 id="contact-title" class="section-title">Let's Connect</h2>
+          <p class="section-sub">Interested in discussing opportunities, collaborations, or career opportunities?
+            Feel free to connect with me.</p>
+        </div>
+
+        <div class="contact-actions reveal" data-stagger>
+          <!-- mailto is built (and URL-encoded) from CONFIG in script.js -->
+          <a class="btn btn-light" id="email-btn" href="mailto:your.email@example.com">
+            <i class="fa-solid fa-envelope" aria-hidden="true"></i><span>your.email@example.com</span>
+          </a>
+          <a class="btn btn-dark-ghost" href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener">
+            <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i><span>LinkedIn</span>
+          </a>
+          <a class="btn btn-dark-ghost" href="https://github.com/yourusername" target="_blank" rel="noopener">
+            <i class="fa-brands fa-github" aria-hidden="true"></i><span>GitHub</span>
+          </a>
+        </div>
+
+        <p class="end-line mono" aria-hidden="true">© 2026 Dhinesh Raji — built with plain HTML, CSS &amp; JavaScript</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Keep content visible if JavaScript is disabled -->
+  <noscript><style>.reveal{opacity:1 !important;transform:none !important}</style></noscript>
+
+  <!-- Particles library (tsParticles) + site behaviour -->
+  <script src="https://cdn.jsdelivr.net/npm/@tsparticles/slim@3/tsparticles.slim.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
